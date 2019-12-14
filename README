@@ -1,0 +1,28 @@
+ChordConstructor README
+Handin: Final handin
+
+Overview:
+	My ChordConstructor consists of seven public classes.
+	The App class instantiates the PaneOrganizer and the Scene, and calls the show() method on the Stage.
+	The PaneOrganizer instantiates the BorderPane _root, the constructorPane, and the quitButton.
+	The ChordConstructor class contains all of the buttons for selecting the key of the chords and the
+		chords themselves. It instantiates the label, background (staff), audio, and buttons. It also
+		creates the Key.
+	The Key class contains all of the Notes, a LinkedList of Notes, and various other variables, including
+		the quality (major/minor) of the scale and the type of accidental (s/f).
+	The Note class contains all of the graphical information for each note, including the Ellipse _noteHead,
+		Line _ledgerLine, Line _staffLine, and ImageView _accidentalImage. It also contains a getter
+		method that returns the English name of the note (e.g. C sharp).
+	The Constants class contains various class contains various dimensions and locations, as well as twelve 
+		integers (0-11) representing each pitch class.
+Design Choices:
+	I chose to make the Key class contain all of the information about the scale so that it would be easy
+		to retrieve the information in the ChordConstructor class.
+	I chose to make the sharps and flats appear as accidentals of the notes rather than on a key signature
+		because I thought that would be easier to implement.
+	I chose to use a FlowPane to hold the buttons so that they would not go off-screen.
+Known Bugs:
+	After pressing a chord button several times, the audio seems to randomly stop working. It appears to 
+		be a bug with JavaFX.
+Extra Credit:
+	Audio, clear button
